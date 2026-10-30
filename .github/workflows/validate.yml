@@ -1,0 +1,51 @@
+name: Validate distribution
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test benchmarks/compare.test.cjs
+  windows-installer:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Microsoft WinGet validation tooling
+        shell: pwsh
+        run: |
+          Install-Module Microsoft.WinGet.Client -Force -Repository PSGallery -Scope CurrentUser
+          Repair-WinGetPackageManager -AllUsers
+      - name: Validate WinGet manifest
+        shell: pwsh
+        run: |
+          $winget = Get-Command winget -ErrorAction SilentlyContinue
+          if (!$winget) {
+            $wingetPath = Get-ChildItem 'C:/Program Files/WindowsApps/Microsoft.DesktopAppInstaller*/winget.exe' | Sort-Object FullName -Descending | Select-Object -First 1 -ExpandProperty FullName
+          } else { $wingetPath = $winget.Source }
+          if (!$wingetPath) { throw 'WinGet executable unavailable' }
+          & $wingetPath validate --manifest distribution/winget/1.0.0 --disable-interactivity
+          if ($LASTEXITCODE -ne 0) { throw 'WinGet validation failed' }
+      - name: Verify and smoke-test current Windows installer
+        shell: pwsh
+        run: |
+          $installerPath = Join-Path $env:RUNNER_TEMP 'Karvo-LaunchPad-Setup-1.0.0.exe'
+          Invoke-WebRequest 'https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.0/Karvo-LaunchPad-Setup-1.0.0.exe' -OutFile $installerPath
+          $expected = '174AC8DF23F2EFA2EC95037DF39DF4E4B5D56908C17D498EDAC416A150B89E0A'
+          if ((Get-FileHash $installerPath -Algorithm SHA256).Hash -ne $expected) { throw 'Installer hash mismatch' }
+          $process = Start-Process -FilePath $installerPath -ArgumentList '/S' -WindowStyle Hidden -PassThru
+          if (!$process.WaitForExit(120000)) { $process.Kill(); throw 'Silent installer timeout' }
+          if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
+          $entry = Get-ItemProperty 'HKCU:/Software/Microsoft/Windows/CurrentVersion/Uninstall/*' | Where-Object DisplayName -eq 'Karvo LaunchPad' | Select-Object -First 1
+          if (!$entry -or $entry.DisplayVersion -ne '1.0.0' -or $entry.Publisher -ne 'Karvo') { throw 'Installed metadata mismatch' }
+          $exePath = Join-Path $entry.InstallLocation 'Karvo LaunchPad.exe'
+          if (!(Test-Path -LiteralPath $exePath)) { throw 'Installed launcher missing' }
+          Write-Output 'Silent install, version, publisher and executable presence verified on clean hosted Windows runner.'
+
