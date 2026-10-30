@@ -4,6 +4,11 @@ PackageVersion: 1.0.0
 InstallerType: nullsoft
 Scope: user
 UpgradeBehavior: install
+AppsAndFeaturesEntries:
+  - DisplayName: Karvo LaunchPad 1.0.0
+    Publisher: Karvo
+    DisplayVersion: 1.0.0
+    ProductCode: 13eab5a9-feff-5efb-ad42-2e360fdeb0b6
 Installers:
   - Architecture: x64
     InstallerUrl: https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.0/Karvo-LaunchPad-Setup-1.0.0.exe

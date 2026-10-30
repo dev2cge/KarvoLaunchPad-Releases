@@ -1,0 +1,23 @@
+name: Performance report
+description: Report measured frame-time or launch-time behaviour
+title: "[Performance] "
+body:
+  - type: textarea
+    id: setup
+    attributes:
+      label: Hardware, versions and settings
+      description: Include optional mods, shaders, resolution, RAM allocation and graphics settings. Remove personal paths and private server addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Reproduction scenario
+      description: State world, entity load and item-frame content/count where relevant. Do not upload private worlds without permission.
+    validations:
+      required: true
+  - type: textarea
+    id: measurements
+    attributes:
+      label: Measurements and comparison method
+      description: Follow benchmarks/README.md for matched baseline comparisons. Say explicitly if no baseline is available.
