@@ -51,7 +51,8 @@ jobs:
           $entries | Select-Object DisplayName, DisplayVersion, Publisher, PSChildName | Format-List
           $entry = $entries | Where-Object DisplayName -eq 'Karvo LaunchPad 1.0.0' | Select-Object -First 1
           if (!$entry -or $entry.DisplayVersion -ne '1.0.0' -or $entry.Publisher -ne 'Karvo') { throw 'Installed metadata mismatch' }
-          $exePath = Join-Path $entry.InstallLocation 'Karvo LaunchPad.exe'
+          $exePath = ($entry.DisplayIcon -replace ',\d+$', '').Trim('"')
+          if (!$exePath -or [IO.Path]::GetFileName($exePath) -ne 'Karvo LaunchPad.exe') { throw 'Unexpected registered executable' }
           if (!(Test-Path -LiteralPath $exePath)) { throw 'Installed launcher missing' }
           Write-Output 'Silent install, version, publisher and executable presence verified on clean hosted Windows runner.'
 
