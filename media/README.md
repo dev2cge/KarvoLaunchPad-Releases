@@ -6,6 +6,16 @@ Karvo LaunchPad is a Minecraft Java Edition launcher and integrated client suppo
 
 Website: https://karvobot.uk/launchpad/ · Downloads: https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/latest
 
+## Preview assets
+
+![Armour durability and HUD utilities, with labelled test data](images/hud-utilities-test.png)
+
+The HUD image is a native client test screen using test inventory values, not a live multiplayer screenshot or FPS benchmark.
+
+![Spectral Harvest cosmetic model composition](images/spectral-harvest.webp)
+
+The bundle image uses Karvo's actual cosmetic model renders composed for the store; it is product artwork, not a gameplay screenshot. Pricing and availability should be checked on the live store before promotion. Karvo retains rights to its artwork; use these previews for factual coverage of Karvo, not resale or unrelated products.
+
 ## 25-second showcase storyboard
 
 - 0–4s: Record the installed Karvo launcher opening. Caption: “Your Minecraft setup, together.” Do not speed up footage labelled real-time.
