@@ -1,0 +1,18 @@
+PackageIdentifier: Karvo.LaunchPad
+PackageVersion: 1.0.0
+PackageLocale: en-GB
+Publisher: Karvo
+PublisherUrl: https://karvobot.uk/
+PublisherSupportUrl: https://github.com/dev2cge/KarvoLaunchPad-Releases/issues
+PackageName: Karvo LaunchPad
+PackageUrl: https://karvobot.uk/launchpad/
+License: Proprietary
+ShortDescription: Minecraft Java Edition launcher and integrated client.
+Description: |-
+  Karvo LaunchPad provides account management, configurable HUD modules, cosmetics and emotes for supported Minecraft Java Edition versions. A valid Minecraft Java Edition account is required. Optional cosmetics and Karvo+ are paid separately.
+Tags:
+  - minecraft
+  - launcher
+ReleaseNotesUrl: https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/tag/v1.0.0
+ManifestType: defaultLocale
+ManifestVersion: 1.9.0

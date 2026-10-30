@@ -1,0 +1,11 @@
+PackageIdentifier: Karvo.LaunchPad
+PackageVersion: 1.0.0
+InstallerType: nullsoft
+Scope: user
+UpgradeBehavior: install
+Installers:
+  - Architecture: x64
+    InstallerUrl: https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.0/Karvo-LaunchPad-Setup-1.0.0.exe
+    InstallerSha256: 174AC8DF23F2EFA2EC95037DF39DF4E4B5D56908C17D498EDAC416A150B89E0A
+ManifestType: installer
+ManifestVersion: 1.9.0
