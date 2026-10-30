@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible Karvo issue
+title: "[Bug] "
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and environment
+      description: Launcher, client, Minecraft, operating system and relevant optional mods
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence
+      description: Remove tokens, private addresses, chat and personal information. Do not upload account files.
