@@ -34,14 +34,14 @@ jobs:
             $wingetPath = Get-ChildItem 'C:/Program Files/WindowsApps/Microsoft.DesktopAppInstaller*/winget.exe' | Sort-Object FullName -Descending | Select-Object -First 1 -ExpandProperty FullName
           } else { $wingetPath = $winget.Source }
           if (!$wingetPath) { throw 'WinGet executable unavailable' }
-          & $wingetPath validate --manifest distribution/winget/1.0.0 --disable-interactivity
+          & $wingetPath validate --manifest distribution/winget/1.0.3 --disable-interactivity
           if ($LASTEXITCODE -ne 0) { throw 'WinGet validation failed' }
       - name: Verify and smoke-test current Windows installer
         shell: pwsh
         run: |
-          $installerPath = Join-Path $env:RUNNER_TEMP 'Karvo-LaunchPad-Setup-1.0.0.exe'
-          Invoke-WebRequest 'https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.0/Karvo-LaunchPad-Setup-1.0.0.exe' -OutFile $installerPath
-          $expected = '174AC8DF23F2EFA2EC95037DF39DF4E4B5D56908C17D498EDAC416A150B89E0A'
+          $installerPath = Join-Path $env:RUNNER_TEMP 'Karvo-LaunchPad-Setup-1.0.3.exe'
+          Invoke-WebRequest 'https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.3/Karvo-LaunchPad-Setup-1.0.3.exe' -OutFile $installerPath
+          $expected = '5DBB58A0D853B2FBA8E5877F44098B0F8CC0738EA46C6C4E9225A28AC00EFED1'
           if ((Get-FileHash $installerPath -Algorithm SHA256).Hash -ne $expected) { throw 'Installer hash mismatch' }
           $process = Start-Process -FilePath $installerPath -ArgumentList '/S' -WindowStyle Hidden -PassThru
           if (!$process.WaitForExit(120000)) { $process.Kill(); throw 'Silent installer timeout' }
@@ -49,8 +49,8 @@ jobs:
           $registryRoots = @('HKCU:/Software/Microsoft/Windows/CurrentVersion/Uninstall/*', 'HKCU:/Software/WOW6432Node/Microsoft/Windows/CurrentVersion/Uninstall/*', 'HKLM:/Software/Microsoft/Windows/CurrentVersion/Uninstall/*', 'HKLM:/Software/WOW6432Node/Microsoft/Windows/CurrentVersion/Uninstall/*')
           $entries = foreach ($registryRoot in $registryRoots) { Get-ItemProperty $registryRoot -ErrorAction SilentlyContinue | Where-Object DisplayName -like 'Karvo*' }
           $entries | Select-Object DisplayName, DisplayVersion, Publisher, PSChildName | Format-List
-          $entry = $entries | Where-Object DisplayName -eq 'Karvo LaunchPad 1.0.0' | Select-Object -First 1
-          if (!$entry -or $entry.DisplayVersion -ne '1.0.0' -or $entry.Publisher -ne 'Karvo') { throw 'Installed metadata mismatch' }
+          $entry = $entries | Where-Object DisplayName -eq 'Karvo LaunchPad 1.0.3' | Select-Object -First 1
+          if (!$entry -or $entry.DisplayVersion -ne '1.0.3' -or $entry.Publisher -ne 'Karvo') { throw 'Installed metadata mismatch' }
           $registeredIcon = ($entry.DisplayIcon -replace ',\d+$', '').Trim('"')
           if (!$registeredIcon -or [IO.Path]::GetFileName($registeredIcon) -notin @('Karvo LaunchPad.exe','uninstallerIcon.ico')) { throw 'Unexpected registered installation directory' }
           $exePath = Join-Path (Split-Path -Parent $registeredIcon) 'Karvo LaunchPad.exe'
