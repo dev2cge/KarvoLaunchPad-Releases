@@ -1,7 +1,7 @@
-174ac8df23f2efa2ec95037df39df4e4b5d56908c17d498edac416a150b89e0a  Karvo-LaunchPad-Setup-1.0.0.exe
-0fc39434de53f9dd0056712072be5518c458e29849ccd3ab762370e7928554c1  Karvo-LaunchPad-1.0.0-linux-x64.AppImage
-d71de5300543452723148ecce21fbea5906000491acba3dcbf95240998052bb9  Karvo-LaunchPad-1.0.0-linux-x64.deb
-4c00a96f497fed538d5a46eb09da20f46fee7d2c5be1cf50a94cf74bd4e73d2f  Karvo-LaunchPad-1.0.0-linux-arm64.AppImage
-cc625ad3722cede36d47f8d187c95d27bd1b8bef276070a037c8f38f28847873  Karvo-LaunchPad-1.0.0-linux-arm64.deb
-e3370df3e52435ade415c6aba99e520be655a6c0a43717ac38fda242e634a525  Karvo-LaunchPad-1.0.0-mac-x64.dmg
-39dd996c2893c5fc711d0f3621f04164e9b166da940c046a8b2ea16d413bd8f5  Karvo-LaunchPad-1.0.0-mac-arm64.dmg
+5dbb58a0d853b2fba8e5877f44098b0f8cc0738ea46c6c4e9225a28ac00efed1  Karvo-LaunchPad-Setup-1.0.3.exe
+823646dc4b4fce53aa57cffa1dd2461646c2d0e2a6da792b8e826afba11e14ab  Karvo-LaunchPad-1.0.3-linux-x64.AppImage
+72dbed193b04f3f7901cbbcdeb42c99102e1f1d6c822a823c305dfd95629995b  Karvo-LaunchPad-1.0.3-linux-x64.deb
+1324620f5d33902788deba93515d13bbc86cb33b63f873d94ab11d48ad97b6c4  Karvo-LaunchPad-1.0.3-linux-arm64.AppImage
+ca4781376c1e55254f02513169e3a5531988fc61f4e1947ab6dbcb5e22857389  Karvo-LaunchPad-1.0.3-linux-arm64.deb
+a987ee3a557aa00f9c4a446ee5d740ad90ebe5132d255d35c4242000fc20aea8  Karvo-LaunchPad-1.0.3-mac-x64.dmg
+62fbd42c1801d34305d91444e78b89b7ad586146a715c666263e7536a3f65ec7  Karvo-LaunchPad-1.0.3-mac-arm64.dmg

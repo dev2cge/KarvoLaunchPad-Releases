@@ -6,7 +6,7 @@ Official launcher downloads, release notes, support and performance-testing reso
 
 Karvo LaunchPad is a Minecraft Java Edition launcher and integrated client, with configurable HUD modules, cosmetics, emotes and account management. Supported game versions are 1.8.9 and 1.12.2 (Forge), and 1.21.1 and 26.2 (Fabric).
 
-Launcher **1.0.0** is distributed for Windows x64, Linux x64/ARM64 and macOS Intel/Apple Silicon. The independently updated client is **1.0.12** as of 30 October 2026. Architecture availability does not imply every game/version combination has been tested on every platform. A valid Minecraft Java Edition account is required. Optional cosmetics and Karvo+ are paid separately.
+Launcher **1.0.3** is distributed for Windows x64, Linux x64/ARM64 and macOS Intel/Apple Silicon. The independently updated client is **1.0.14** as of 1 November 2026. Architecture availability does not imply every game/version combination has been tested on every platform. A valid Minecraft Java Edition account is required. Optional cosmetics and Karvo+ are paid separately.
 
 ## Download verification
 

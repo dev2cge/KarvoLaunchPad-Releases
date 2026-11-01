@@ -1,5 +1,14 @@
 # Release notes
 
+## Launcher 1.0.3 — 1 November 2026
+
+- Fixes fresh Minecraft 1.8.9 and 1.12.2 client setup when no previous Karvo client has been selected.
+- Downloads and verifies the client before preparing its matching performance dependencies.
+- Keeps existing verified client selections intact if dependency preparation fails.
+- Includes Windows x64, Linux x64/ARM64 and macOS Intel/Apple Silicon installers.
+
+27 targeted updater/dependency tests passed, plus clean client and dependency downloads for both legacy versions. A full game launch on the affected user’s computer remains to be confirmed.
+
 ## Launcher 1.0.0 — 28 October 2026
 
 - Refined launcher navigation, settings and Minecraft version selection.
@@ -16,4 +25,4 @@
 - Owned-cosmetic/emote locker, configurable emote wheel and two equipped pets.
 - Cosmetic, skin-layer, emote, chat and rendering improvements across supported versions.
 
-Launcher and client have separate version numbers. This release mirrors the existing launcher installers; it does not rebuild them. Performance depends on hardware, world and settings; no universal FPS improvement is claimed.
+Launcher and client have separate version numbers. Performance depends on hardware, world and settings; no universal FPS improvement is claimed.
