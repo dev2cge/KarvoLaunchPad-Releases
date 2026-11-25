@@ -1,0 +1,2 @@
+ce6f34bee8431b664dca7cb07bce427f5af68b7935cdd0b11ad6265f199e7a6d  Karvo-LaunchPad-Setup-1.0.9.exe
+d379407702d533361800dc332c7f0b2378a77c2e6f858de9eafc97418edc584c  Karvo-LaunchPad-1.0.9-windows-x64.exe

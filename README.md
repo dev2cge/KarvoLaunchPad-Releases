@@ -1,5 +1,12 @@
 # Karvo LaunchPad
 
+## Latest Windows release: 1.0.9
+
+[Download the native Windows launcher](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.9/Karvo-LaunchPad-Setup-1.0.9.exe) · [Release notes](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/tag/v1.0.9)
+
+The native Rust Windows launcher preserves existing accounts and game data during installation. Existing macOS/Linux downloads remain available at [KarvoClient.com](https://karvoclient.com/launchpad/).
+
+
 Official launcher downloads, release notes, support and performance-testing resources for Karvo LaunchPad.
 
 [Download the launcher](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/latest) · [Website](https://karvobot.uk/launchpad/) · [Report a problem](https://github.com/dev2cge/KarvoLaunchPad-Releases/issues/new/choose)
