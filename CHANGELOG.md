@@ -1,5 +1,20 @@
 # Release notes
 
+## 1.0.10 — 25 November 2026
+
+Karvo LaunchPad 1.0.10 fixes false mod-conflict errors after upgrading from the previous launcher.
+
+- Recognises Fabric API installed automatically by older Karvo launchers on Minecraft 26.2 and 1.21.1.
+- Migrates older custom-instance installation records correctly.
+- Keeps modified and unrecorded mods intact, and names the affected file when a genuine conflict occurs.
+
+Client **1.0.53** is also available through the launcher for all four supported Minecraft versions. The HUD editor now has only Done on its top bar; use left Ctrl-click or a drag box to select multiple items, and F1 to see keyboard shortcuts. It also includes the recent settings and icon improvements.
+
+Use **Update all** in the launcher. If an earlier launcher keeps displaying the false conflict, install the updated Windows launcher first. Accounts and game data remain in place.
+
+Windows: use **Karvo-LaunchPad-Setup-1.0.10.exe**. Existing macOS/Linux downloads remain available on [KarvoClient.com](https://karvoclient.com/launchpad/) while native account migration is validated.
+
+
 ## 1.0.9 — 25 November 2026
 
 Karvo LaunchPad 1.0.9 brings the native Windows launcher to the main release.

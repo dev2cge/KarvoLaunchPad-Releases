@@ -1,8 +1,8 @@
 # Karvo LaunchPad
 
-## Latest Windows release: 1.0.9
+## Latest Windows release: 1.0.10
 
-[Download the native Windows launcher](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.9/Karvo-LaunchPad-Setup-1.0.9.exe) · [Release notes](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/tag/v1.0.9)
+[Download the native Windows launcher](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/download/v1.0.10/Karvo-LaunchPad-Setup-1.0.10.exe) · [Release notes](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/tag/v1.0.10)
 
 The native Rust Windows launcher preserves existing accounts and game data during installation. Existing macOS/Linux downloads remain available at [KarvoClient.com](https://karvoclient.com/launchpad/).
 
@@ -13,7 +13,7 @@ Official launcher downloads, release notes, support and performance-testing reso
 
 Karvo LaunchPad is a Minecraft Java Edition launcher and integrated client, with configurable HUD modules, cosmetics, emotes and account management. Supported game versions are 1.8.9 and 1.12.2 (Forge), and 1.21.1 and 26.2 (Fabric).
 
-The native Windows launcher is **1.0.9**. Existing Linux x64/ARM64 and macOS Intel/Apple Silicon downloads remain available on the website while native migration of their saved accounts is validated. Client updates are managed separately by the launcher. A valid Minecraft Java Edition account is required. Optional cosmetics and Karvo+ are paid separately.
+The native Windows launcher is **1.0.10**. Existing Linux x64/ARM64 and macOS Intel/Apple Silicon downloads remain available on the website while native migration of their saved accounts is validated. Client **1.0.53** is available for all four supported Minecraft versions; the launcher manages installation and updates. A valid Minecraft Java Edition account is required. Optional cosmetics and Karvo+ are paid separately.
 
 ## Download verification
 
