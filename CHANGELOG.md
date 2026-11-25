@@ -1,5 +1,22 @@
 # Release notes
 
+## 1.0.9 — 25 November 2026
+
+Karvo LaunchPad 1.0.9 brings the native Windows launcher to the main release.
+
+- Replaces the Electron runtime with a native Rust launcher.
+- A consistent interface across Home, Versions, Instances, Friends, Console and Settings.
+- Dedicated artwork for each Minecraft version and an online-player badge beside More.
+- Built-in installation, repair, account switching, Friends, screenshots, notes and launcher updates.
+- The installer keeps existing accounts, worlds, servers, mods and other user data in place, and removes the old application runtime after verification.
+
+Download **Karvo-LaunchPad-Setup-1.0.9.exe** for Windows x64. The versioned standalone executable is used by the native updater; use the installer for the first migration from the old launcher.
+
+Existing macOS and Linux downloads remain available on [KarvoClient.com](https://karvoclient.com/launchpad/) while migration of their saved accounts is validated. This release does not change their automatic-update feeds.
+
+Client UI changes, including the keyboard-first HUD editor, are being tested separately and are not included as a client release here.
+
+
 ## Launcher 1.0.3 — 1 November 2026
 
 - Fixes fresh Minecraft 1.8.9 and 1.12.2 client setup when no previous Karvo client has been selected.

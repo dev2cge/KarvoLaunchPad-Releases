@@ -9,17 +9,17 @@ The native Rust Windows launcher preserves existing accounts and game data durin
 
 Official launcher downloads, release notes, support and performance-testing resources for Karvo LaunchPad.
 
-[Download the launcher](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/latest) · [Website](https://karvobot.uk/launchpad/) · [Report a problem](https://github.com/dev2cge/KarvoLaunchPad-Releases/issues/new/choose)
+[Download the launcher](https://github.com/dev2cge/KarvoLaunchPad-Releases/releases/latest) · [Website](https://karvoclient.com/launchpad/) · [Report a problem](https://github.com/dev2cge/KarvoLaunchPad-Releases/issues/new/choose)
 
 Karvo LaunchPad is a Minecraft Java Edition launcher and integrated client, with configurable HUD modules, cosmetics, emotes and account management. Supported game versions are 1.8.9 and 1.12.2 (Forge), and 1.21.1 and 26.2 (Fabric).
 
-Launcher **1.0.3** is distributed for Windows x64, Linux x64/ARM64 and macOS Intel/Apple Silicon. The independently updated client is **1.0.14** as of 1 November 2026. Architecture availability does not imply every game/version combination has been tested on every platform. A valid Minecraft Java Edition account is required. Optional cosmetics and Karvo+ are paid separately.
+The native Windows launcher is **1.0.9**. Existing Linux x64/ARM64 and macOS Intel/Apple Silicon downloads remain available on the website while native migration of their saved accounts is validated. Client updates are managed separately by the launcher. A valid Minecraft Java Edition account is required. Optional cosmetics and Karvo+ are paid separately.
 
 ## Download verification
 
 Download an installer and SHA256SUMS.txt from the same release. On Windows use Get-FileHash; on Linux use sha256sum; on macOS use shasum -a 256. Compare the complete digest. A matching hash verifies the downloaded bytes against this release; it is not an independent security audit.
 
-Windows builds currently use Karvo's self-signed certificate. Windows may display Unknown Publisher or SmartScreen warnings. These builds do not carry a publicly trusted publisher certificate. macOS availability does not constitute a claim of Apple notarisation. Obtain downloads only here or at karvobot.uk.
+Windows builds currently use Karvo's self-signed certificate. Windows may display Unknown Publisher or SmartScreen warnings. These builds do not carry a publicly trusted publisher certificate. macOS availability does not constitute a claim of Apple notarisation. Obtain downloads only here or at karvoclient.com.
 
 ## Support and transparency
 
